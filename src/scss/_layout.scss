@@ -1,6 +1,4 @@
 html,body{
-  font-size:13px;
-  min-width:320px;
   overflow:auto;
   color:$black;
   min-width: $pc;
@@ -49,7 +47,7 @@ header{
           size:16px;
           weight: bold;
         }
-        line-height: $header_pc - 1 ;
+        line-height: $header_pc;
         &:before {
           content: "|";
           position: absolute;

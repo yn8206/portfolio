@@ -9,28 +9,30 @@ h2{
   border:2px solid $point;
   border-radius: 8px;
   display: inline-block;
-  font-weight: bold;
   color: #e7b200;
   margin-top:75px;
   font-size: 1.42rem;
   line-height: 1;
   box-sizing: border-box;
 }
+section, main{
+  @include fontfamily(100, "pen");
+}
 #main{
   display:block;
   position:relative;
   height: 100%; /*1vh == view port 1%*/
   min-height: 800px;
-  margin: 0px auto;
+  margin: 60px auto 0;
   overflow: hidden;
   text-align:center;
   @include bg("img_main.jpg", no-repeat, 48% 300px);
   h1{
-    margin: 135px 0 5px;
-    font-size:3.59rem;
+    margin: 115px 0 5px;
+    font-size:4.2rem;
   }
   p{
-    font-size:1.64rem;
+    font-size:1.92rem;
   }
 }
 section{
@@ -49,15 +51,12 @@ section{
     font-size: 1.42rem;
     line-height: 2.5;
     color: #646464;
-    span{
-      display: block;
-    }
   }
   .skill{
       padding:100px 0;
       background: $point;
       color:$white;
-      .img_skill{
+      .img{
         width:120px;
         display: inline-block;
         vertical-align: top;
@@ -80,8 +79,6 @@ section{
   }
   a.btn{
     margin-top: 30px;
-    display: inline-block;
-    text-decoration: underline;
     color : $white;
     border-color: $white;
     .img{

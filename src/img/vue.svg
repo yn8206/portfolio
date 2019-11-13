@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="500px" height="600px" viewBox="0 0 500 600" enable-background="new 0 0 500 600" xml:space="preserve">
+<path fill="#FFFFFF" d="M22.5,232.5h454v-63.019L325.801,11.5H69.243c-22.613,0-43.793,19.332-43.793,41.962 M372.429,169.549
+	c-22.613,0-46.929-22.906-46.929-45.538V15.316l146.221,153.763L372.429,169.549z"/>
+<path fill="#FFFFFF" d="M481.057,245.5H22.5v296.548c0,22.632,23.623,49.452,46.235,49.452h372.724
+	c22.613,0,40.156-18.317,40.156-40.949L481.057,245.5z"/>
+<g>
+	
+		<text transform="matrix(0.9992 0 0 1 88.4023 145.1309)" fill="#FFD176" stroke="#FFD176" stroke-width="4" stroke-miterlimit="10" font-family="'MalgunGothicBold'" font-size="64.9516">Vue.js</text>
+</g>
+<polygon fill="#FFD176" points="113.395,314.5 253.682,552.74 391.991,314.5 331.437,314.5 251.637,448.69 167.793,314.5 "/>
+<polygon fill="#FFEBC7" points="166.687,314.5 223.32,314.5 253.969,364.989 282.012,314.5 331.437,314.5 251.637,448.69 "/>
+</svg>
