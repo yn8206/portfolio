@@ -3,7 +3,8 @@
     <!-- <Header/> -->
     <Main/>
     <About/>
-    <Portfolio :list="list"/>
+    <Portfolio :list="list" @openPopEvent="openPop"/>
+    <Pop v-if="this.item !== null" :item="item" @closePopEvent="closePop"/>
     <Contact/>
     <Footer/>
   </div>
@@ -16,6 +17,7 @@ import About from './components/About.vue';
 import Portfolio from './components/Portfolio.vue';
 import Contact from './components/Contact.vue';
 import Footer from './components/Footer.vue';
+import Pop from './components/Pop.vue';
 
 import portfolioList from './data/portfolio.json';
 
@@ -29,11 +31,11 @@ export default {
         responsive: [],
         web: [],
       },
+      item:null,
     };
   },
   methods: {
     getPortfolio() {
-      console.log('포트폴리오 내용을 불러옴니당~');
       portfolioList.map((item) => {
         const obj = {
           id: item.id,
@@ -46,6 +48,19 @@ export default {
         item.type == 'pc' ? this.list.pc.push(obj) : (item.type == 'mobile' ? this.list.mobile.push(obj) :  (item.type == 'web' ? this.list.web.push(obj) : this.list.responsive.push(obj)));
       });
     },
+    openPop($id){
+      console.log("팝업을 오픈합니다!!");
+      //js break continue x 대신 some, every 상용
+      portfolioList.some((item, idx) => {
+        if(item.id == $id){
+          this.item = item;
+          return true;
+        }
+      });
+    },
+    closePop(){
+      this.item = null;
+    }
   },
   created() {
     this.getPortfolio();
@@ -57,6 +72,7 @@ export default {
     Portfolio,
     Contact,
     Footer,
+    Pop
   },
 };
 </script>

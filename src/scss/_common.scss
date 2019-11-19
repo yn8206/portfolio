@@ -20,7 +20,7 @@ h2{
   line-height: 1;
   box-sizing: border-box;
 }
-section, main{
+main, #about{
   @include fontfamily(100, "pen");
 }
 #main{
@@ -99,7 +99,9 @@ section{
 #port{
   max-width: $pc;
   margin:0 auto;
-  
+  h1, h2{
+    @include fontfamily(100, "pen");
+  }
   //hooper 슬라이더 커스텀
   .corver{
     background: rgba(0,0,0,0.8);
@@ -112,8 +114,6 @@ section{
 	  @include fontfamily(100, "sq");
     position: relative;
     cursor: pointer;
-    // display: none;
-    // margin-top: -100%;
     transition: all 100ms;
     opacity: 0;
     h3{
@@ -159,9 +159,13 @@ section{
     overflow: hidden;
     &:hover{
       .corver{
-        // margin-top: 0;
         opacity: 1;
       }
+    }
+  }
+  .is-dragging{
+    background: red;
+    .corver{
     }
   }
   .slider{
@@ -212,6 +216,79 @@ section{
         margin-right: 0px;
       }
     }
+  }
+}
+.pop{
+  padding: 0;
+  top:0;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 10;
+  @include set_content(100%,100%, block, fixed, #242424);
+  .wrap{
+    width: $pc;
+    margin: 0 auto;
+    padding:100px 0 50px;
+    text-align: left;
+    box-sizing: border-box;
+    color:rgba(255,255,255, 0.8);
+    position: relative;
+    h2{
+      color:$white;
+    }
+    .close{
+      @include blind;
+      @include set_content(35px, 35px, block, absolute);
+      border: 1px solid $white;
+      right: 0;
+      top:65px;
+      &:before{
+        @include set_content(2px, 20px, block, absolute, $white);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+      &:after{
+        @include set_content(2px, 20px, block, absolute, $white);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
+    // font-size: 15px;
+    // h3{
+    //   margin-bottom: 10px;
+    //   font-size: 24px;
+    //   position: relative;
+    //   display: inline-block;
+    //   &:before{
+    //     @include set_content(100%, 2px, block, absolute, $point);
+    //     bottom:0;
+    //     left:0;
+    //   }
+    // }
+    // .cont{
+    //   width: 870px;
+    //   margin: 0 auto;
+    //   padding: 0 100px;
+    //   box-sizing: border-box;
+    //   position:relative;
+    // }
+    // p{
+    //   color:#777777;
+    // }
+    // .site{
+    //   width: 670px;
+    //   margin: 25px 0 50px;
+    // }
+    // a{
+    //   color:#3c8fd3;
+    //   text-decoration: underline;
+    // }
+    // li{
+    //   margin-bottom: 10px;
+    // }
   }
 }
 .pop_wrap{
