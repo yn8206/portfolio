@@ -2,6 +2,7 @@ import Vue from 'vue';
 import App from './App.vue';
 
 
+import 'hooper/dist/hooper.css';
 import Style from './scss/style.scss';
 
 Vue.config.productionTip = false;

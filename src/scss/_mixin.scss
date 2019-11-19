@@ -1,4 +1,4 @@
-@mixin setFont($nm, $fileNm, $weight:normal){
+@mixin setFont($nm, $fileNm, $weight:100){
     @font-face {
         font-family: $nm;
         font-weight: $weight;
@@ -7,7 +7,7 @@
              local("※"), url($font_url + $fileNm + ".woff") format("woff");
     }
 }
-@mixin fontfamily($weight:normal, $nm:null){
+@mixin fontfamily($weight:100, $nm:null){
   font:{
     @if $nm == null {
         family: $family;
@@ -50,11 +50,12 @@
 	clear: both;
 	content: "";
 }
-@mixin blind_txt {
-	text-indent:-2000em;
-	font-size:1px;
-	overflow:hidden;
-}
+@mixin blind {
+    overflow: hidden;
+    font-size: 0; 
+    line-height: 0;
+    text-indent: -2000em;
+  }
 @mixin ellipsis($type:null,$num:2) {
     overflow:hidden;
     text-overflow:ellipsis;
@@ -75,7 +76,7 @@
     position:$position;
     @include clear;
 }
-@mixin set_content($width:auto, $height:auto, $color:null, $display:inline-block, $position:relative) {
+@mixin set_content($width:auto, $height:auto, $display:inline-block, $position:relative, $color:null) {
     content:"";
     width:$width;
     height:$height;
@@ -91,4 +92,13 @@
 	}@else if $media == mobile {
 		@media (max-width:$tablet_size) { @content; }
 	}
+}
+@function calcRem($size) { /*Mobile용 믹스인*/
+    $remSize: $size / $font_def;
+    @return  #{$remSize}rem;
+  }
+  
+@function calcPercent($size, $defsize) { /*Mobile용 믹스인*/
+$remSize: $size / $defsize;
+@return percentage($remSize);
 }

@@ -1,0 +1,241 @@
+[
+    {
+        "id" : 1,
+        "type" : "pc",
+        "title": "GOM & Company PC",
+        "work" : {
+            "new": "60%",
+            "info":"구축, 유지보수",
+            "desc":"개발 PL로 초기 기획부터 구축, 전반적인 UI 작업에 참여하였습니다. <br>홍보, contact us 제외한 모든 UI개발을 담당하였습니다." 
+        },
+        "skill" : "HTML5, CSS3, SCSS, Javascript, jQuery, Gulp, GitLab, 웹 표준, 웹 접근성, SEO",
+        "browser" :"IE 9 이상, 모던 브라우저",
+        "url1" : "http://www.gomcorp.com/",
+        "url2" : "http://www.gomcorp.com/ui/pc/html/index.html",
+        "poster":"gom_pc.jpg",
+        "img": ["gom_pc.jpg"]
+    },
+    {
+        "id" : 2,
+        "type" : "mobile",
+        "title": "GOM & Company Mobile",
+        "sub_type":"반응형 (tablet, mobile)",
+        "work" : {
+            "new": "40%",
+            "info":"구축, 유지보수",
+            "desc":"UI개발 PA로 구축에 참여하였습니다. <br>곰앤컴퍼니, 사업소개 , 채용안내 등 UI개발을 담당하였습니다." 
+        },
+        "skill" : "HTML5, CSS3, SCSS, Javascript, jQuery, Gulp, GitLab, 웹 표준, 웹 접근성, SEO",
+        "browser" :"모바일 웹, 모던 브라우저",
+        "url1" : "http://m.gomcorp.com/",
+        "url2" : "http://m.gomcorp.com/ui/mobile/html/index.html",
+        "poster":"gom_m.jpg",
+        "img": ["gom_m.jpg"]
+    },
+    {
+        "id" : 3,
+        "type" : "responsive",
+        "sub_type":"반응형 (pc, tablet, mobile)",
+        "title": "GOMLab", 
+        "work" : {
+            "new": "80%",
+            "info":"구축, 신규 페이지 개발, <br>개선 및 유지보수, 프로모션, DM",
+            "desc":"개발 PL로 초기 기획부터 구축, 전반적인 UI 작업에 참여하였습니다. <br>한국어, 일본어, 영어를 지원하며, 웹 폰트를 경량화하여 적용하였습니다. <br>반응형 웹으로 작업하였습니다.<br>" 
+        },
+        "skill" : "HTML5, CSS3, SCSS, Javascript, jQuery, Gulp, GitLab, 반응형, 웹 표준, 웹 접근성, SEO",
+        "browser" :"IE 9 이상, 모던 브라우저",
+        "url1" : "https://www.gomlab.com/?language=kr",
+        "url2" : "https://www.gomlab.com/gomlab_v2/ui/html/index.html",
+        "poster":"lab.jpg",
+        "img": ["lab.jpg"]
+    },
+    {
+        "id" : 4,
+        "type" : "pc",
+        "title": "GOM Meme Maker",
+        "work" : {
+            "new": "80%",
+            "info":"구축, 개선 및 유지보수",
+            "desc":"UI개발 PL로 초기 기획부터 구축, 전반적인 UI 작업에 참여하였습니다." 
+        },
+        "skill" : "HTML5, CSS3, SCSS, Javascript, jQuery, Gulp, GitLab",
+        "browser" :"Chrome, poera",
+        "url1" : "http://www.gomlab.com/gomlab_v2/ui/gommeme/html/index.html",
+        "url2" : "https://www.gomlab.com/gomlab_v2/ui/html/index.html",
+        "poster":"meme.jpg",
+        "img": ["meme.jpg"]
+    },
+    {
+        "id" : 5,
+        "type" : "pc",
+        "title": "GOM Mix Web",
+        "work" : {
+            "new": "30%",
+            "info":"구축, 개선 및 유지보수",
+            "desc":"UI개발 PA로 구축에 참여하였습니다. <br>로그인, 팝업, 미지원 브라우저 안내, 튜토리얼 등 UI개발을 담당하였습니다." 
+        },
+        "skill" : "HTML5, CSS3, SCSS, Javascript, jQuery, Gulp, GitLab",
+        "browser" :"Chrome, poera",
+        "url1" : "https://www.gomlab.com/gommixweb-video-editing/editor/",
+        "url2" : "https://www.gomlab.com/gomlab_v2/ui/gommixweb/html/index.html",
+        "poster":"mix.jpg",
+        "img": ["mix.jpg"]
+    },
+    {
+        "id" : 6,
+        "type" : "responsive",
+        "sub_type":"반응형 (pc, tablet, mobile)",
+        "title": "Kocowa",
+        "work" : {
+            "new": "40%",
+            "info":"구축, 신규 페이지 개발, 개선 및 유지보수, 프로모션, DM",
+            "desc":"UI개발 PA로 구축에 참여하였습니다. <br>결제, 이용권/캐시안내, 마이TV, 성인인증, 이벤트 페이지 UI 개발을 담당하였습니다." 
+        },
+        "skill" : "HTML5, CSS3, SCSS, Javascript, jQuery, Gulp, GitLab, 반응형, 웹 표준, 웹 접근성",
+        "browser" :"IE 9 이상, 모던 브라우저",
+        "url1" : "http://www.kocowa.jp",
+        "url2" : "http://i.kocowa.jp/ui/html/kocowa.html",
+        "poster":"ko.jpg",
+        "img": ["ko.jpg"]
+    },
+    {
+        "id" : 7,
+        "type" : "mobile",
+        "sub_type":"반응형 (tablet, mobile)",
+        "title": "Whosfan",
+        "work" : {
+            "new": "40%",
+            "info":"구축, 개선 및 유지보수",
+            "desc":"UI개발 PA로 구축에 참여하였습니다. <br>chart, 이용약관, FAQ  UI 개발을 담당하였습니다." 
+        },
+        "skill" : "HTML5, CSS3, SCSS, Javascript, jQuery, Gulp, GitLab, 반응형, 웹 표준, 웹 접근성",
+        "browser" :"모바일 웹, 모던 브라우저",
+        "url1" : "http://m.whosfan.com/chart",
+        "poster":"whos.jpg",
+        "img": ["whos.jpg"]
+    },
+    {
+        "id" : 8,
+        "type" : "pc", 
+        "title": "GOMTV PC",
+        "work" : {
+            "info": "개편, 신규 페이지 개발, <br>개선 및 유지보수, <br>프로모션, DM",
+            "desc":"부분 개편(메인, 카테고리), 신규 페이지 개발(스포츠, 나혼자보는TV)" 
+        },
+        "skill" : "HTML5, CSS3, SCSS, Javascript, jQuery, Gulp, GitLab, 웹 표준, 웹 접근성",
+        "browser" :"IE7 이상, 모던 브라우저",
+        "url1" : "http://www.gomtv.com/",
+        "poster":"tv.jpg",
+        "img": ["tv.jpg"]
+    },
+    {
+        "id" : 9,
+        "type" : "pc", 
+        "title": "GOMTV Mini Web",
+        "work" : {
+            "new": "50%",
+            "info":"개편, 신규 페이지 개발, <br>개선 및 유지보수",
+            "desc":"부분 개편(Gnb), 신규 페이지 개발(스포츠)" 
+        },
+        "skill" : "HTML5, CSS3, SCSS, Javascript, jQuery, Gulp, GitLab, 웹 표준, 웹 접근성",
+        "browser" :"IE 6 이상, 모던 브라우저",
+        "poster":"tvmn.jpg",
+        "img": ["tvmn.jpg"] 
+    }, 
+    {
+        "id" : 10,
+        "type" : "mobile",
+        "sub_type":"반응형 (tablet, mobile)",
+        "title": "GOMTV Mobile",
+        "work" : {
+            "new": "50%",
+            "info":"개편, 신규 페이지 개발, <br>개선 및 유지보수, 프로모션",
+            "desc":"UI개발 PA로 구축에 참여하였습니다. <br>로그인 회원가입 등 회원 관련 페이지, 이용권, 결제, 공지사항 문의하기 등 help 페이지, 이벤트 페이지 등  UI개발을 담당하였습니다." 
+        },
+        "skill" : "HTML5, CSS3, SCSS, Javascript, jQuery, Gulp, GitLab, 반응형, 웹 표준, 웹 접근성",
+        "browser" :"모바일 웹, 모던 브라우저",
+        "url1" : "http://m.gomtv.com/",
+        "url2" : "http://mtest.gomtv.com/ui/gomtv_m/html/gomtv.html",
+        "poster":"tvm.jpg",
+        "img": ["tvm.jpg"]
+    }, 
+    {
+        "id" : 11,
+        "type" : "pc",
+        "title": "Vrix",
+        "work" : {
+            "info":"신규 페이지 개발, 개선 및 유지보수, 프로모션"
+        },
+        "skill" : "HTML5, CSS3, SCSS, Javascript, jQuery, Gulp, GitLab, 웹 표준, 웹 접근성",
+        "browser" :"IE 9 이상, 모던 브라우저",
+        "poster":"vrix.jpg",
+        "img": ["vrix.jpg"]
+    }, 
+    {
+        "id" : 12,
+        "type" : "mobile",
+        "sub_type":"반응형 (tablet, mobile)",
+        "title": "Ait",
+        "work" : {
+            "info":"유지보수"
+        },
+        "skill" : "HTML5, CSS3, SCSS, Javascript, jQuery, Gulp, GitLab, 반응형, 웹 표준, 웹 접근성",
+        "browser" :"모바일 웹, 모던 브라우저",
+        "url2" : "http://d1eho02do7k87s.cloudfront.net/html/index.html",
+        "poster":"ait.jpg",
+        "img": ["ait.jpg"]
+    }, 
+    {
+        "id" : 13,
+        "type" : "responsive",
+        "sub_type":"반응형 (pc, tablet, mobile)",
+        "title": "리우올림픽",
+        "work" : {
+            "info":"구축, 유지보수"
+        },
+        "skill" : "HTML5, CSS3, Javascript, jQuery, 웹 표준, 웹 접근성",
+        "browser" :"IE 9 이상, 모던 브라우저",
+        "poster":"rio.jpg",
+        "img": ["rio.jpg"]
+    }, 
+    {
+        "id" : 14,
+        "type" : "web",
+        "sub_type" : "웹개발 & UI 유지보수",
+        "title": "Apex, Apex Mts",
+        "work" : {
+            "info":"유지보수"
+        },
+        "skill" : "JAVA, JSP, 리눅스, PHP, Mysql, HTML5, CSS3, Javascript, jQuery",
+        "browser" :"IE 9 이상, 모던 브라우저",
+        "url1" : "https://www.apexinfo.co.kr/",
+        "poster":"apex.jpg",
+        "img": ["apex.jpg"]
+    }, 
+    {
+        "id" : 15,
+        "type" : "web",
+        "sub_type" : "웹개발 & UI개발",
+        "title": "지오패스",
+        "work" : {
+            "info":"서버관리, 신규 페이지 개발, <br>개선 및 유지보수, 프로모션"
+        },
+        "skill" : "JAVA, JSP, 리눅스, Oracle, AJAX, API(아마존, 라쿠텐, 이베이 등), HTML5, CSS3, Javascript, jQuery",
+        "url1" : "http://www.geopass.com/index.do",
+        "poster":"geo.jpg",
+        "img": ["geo.jpg"]
+    }, 
+    {
+        "id" : 16,
+        "type" : "web",
+        "sub_type" : "웹개발 & UI개발",
+        "title": "아마존",
+        "work" : {
+            "info":"서버관리, 개편, 신규 페이지 개발, <br>개선 및 유지보수, 프로모션"
+        },
+        "skill" : "PHP, 리눅스, Mysql, AJAX, API(아마존), HTML5, CSS3, Javascript, jQuery",
+        "url1" : "http://www.amazon24.co.kr/index.do",
+        "poster":"ama.jpg",
+        "img": ["ama.jpg"]
+    }
+]

@@ -1,7 +1,12 @@
-h2{
-  margin-bottom: 50px;
+h1{
+  margin: 0 auto 50px;
   line-height: 1;
-  font-size:3.59rem;
+  font-size:50px;
+}
+h2{
+  font-size: 28px;
+  line-height: 1;
+  text-align: left;
 }
 .btn{
   min-width: 300px;
@@ -43,7 +48,7 @@ section{
   background: #fafafa;
   padding: 0;
   overflow: hidden;
-  h2{
+  h1{
     color:$point;
   }
   .intro{
@@ -73,7 +78,7 @@ section{
 #contact{
   padding:70px 0;
   background: $point;
-  h2{
+  h1{
     color:$white;
     margin-bottom: 20px;
   }
@@ -92,93 +97,76 @@ section{
   }
 }
 #port{
-  h2{
-    color:$black;
-    margin-bottom: 70px;
-  }
-  strong,span{
-    display: block;
-  }
-  span{
-    font-size: 12px;
-  }
-  .lst{
-    width: 100%;
-    max-width: $pc_min;
-    margin:0 auto;
-    &:after{
-      @include clear;
+  max-width: $pc;
+  margin:0 auto;
+  
+  //hooper 슬라이더 커스텀
+  .hooper{
+    height: auto;
+    padding: 0;
+    &:focus{
+      outline: none;
     }
   }
-  .bx{
-     width: 225px;
-    height: 255px;
-    margin:35px 30px;
-    padding:50px 35px 40px 56px;
+  .hooper-slide {
+    width: 360px !important;
+    height: 240px;
     box-sizing: border-box;
-    box-shadow: 5px 5px 20px 0px #ccc;
-    float:left;
-    text-align: left;
-    transition: 200ms;
-    .cont{
-      width: 100%;
-      height: 100%;
-      position:relative;
-      box-sizing: border-box;
+    background-size: 100% !important;
+    background-repeat: no-repeat !important;
+    float: left;
+    margin: 15px 20px;
+    border-radius: 15px;
+    border: 2px solid #efefef;
+    box-shadow: 5px 5px 10px 0px #eee;
+  }
+  .slider{
+    position: relative;
+    h2{
+      padding: 0 20px;
+    }
+    .hooper{
+      margin: 20px 0 50px;
+    }
+    .hooper-pagination{
+      top:-20px;
+      right:15px;
+      bottom: -20px;
+      transform:none;
       display: block;
     }
-    .link{
-      font-size: 12px;
-      font-weight: 100;
-      position:absolute;
-      bottom:0px;
-      right:0px;
+    .hooper-indicator{
+      background: #cacaca;
     }
-    h3{
-      display: inline-block;
-      position: relative;
-      span{
-        font-size: 16px;
-        color:$black;
-        position:relative;
-        z-index: 2;
+    button.is-active{
+      background: $point;
+    }
+    .prev, .next{
+      @include blind;
+      @include set_content(20px, 25px, block, absolute);
+      top:58%;
+      transform: translateY(-50%);
+      z-index: 2;
+      &:before{
+        @include set_content(15px, 15px, block);
+        border-left: 2px solid #cacaca;
+        border-bottom: 2px solid #cacaca;
+        
       }
     }
-    strong{
-      margin-bottom: 5px;
-      font-size: 15px;
-      color:#777777;
-    }
-    span{
-      color:#aaaaaa;
-    }
-    &:hover{
-      box-shadow: 5px 5px 20px 0px #aaa;
-      .link{
-        color: #e7b200;
-        text-decoration: underline;
+    .prev{
+      left: -15px;
+      &:before{
+        transform: rotate(45deg);
+        margin-left: 5px;
       }
     }
-    &:nth-child(4n){
-      margin-right: 0;
-    }
-    &:nth-child(4n+1){
-      margin-left: 0;
-    }
-    &.bg1{
-      @include bg('bg_good1.svg', no-repeat, 50%, 101%);
-    }
-    &.bg2{
-      @include bg('bg_good2.svg', no-repeat, 50%, 101%);
-    }
-    &.bg3{
-      @include bg('bg_good3.svg', no-repeat, 50%, 101%);
-    }
-    &.bg4{
-      @include bg('bg_good4.svg', no-repeat, 50%, 101%);
-    }
-    &.bg5{
-      @include bg('bg_good5.svg', no-repeat, 50%, 101%);
+    .next{
+      right: -13px;
+      &:before{
+        transform: rotate(225deg);
+        margin-right: 0px;
+      }
     }
   }
 }
@@ -187,11 +175,11 @@ section{
   z-index: 10;
   padding:0;
   margin:0;
-  @include set_content(100%,100%,$black, none, fixed);
+  @include set_content(100%,100%, none, fixed, $black);
   top:0;
   left:0;
   .pop{
-    @include set_content(100%, 100%, $white, none, absolute);
+    @include set_content(100%, 100%, none, absolute, $white);
     max-width: 900px;
     max-height: 650px;
     overflow: auto;
@@ -208,7 +196,7 @@ section{
       position: relative;
       display: inline-block;
       &:before{
-        @include set_content(100%, 2px, $point, block, absolute);
+        @include set_content(100%, 2px, block, absolute, $point);
         bottom:0;
         left:0;
       }
@@ -242,15 +230,15 @@ section{
     border:1px solid $black;
     top:-20px;
     right:40px;
-    @include blind_txt;
+    @include blind;
     &:before{
-      @include set_content(2px, 20px, $black, block, absolute);
+      @include set_content(2px, 20px, block, absolute, $black);
       transform: translate(-50%, -50%) rotate(45deg);
       top:50%;
       left:50%;
     }
     &:after{
-      @include set_content(2px, 20px, $black, block, absolute);
+      @include set_content(2px, 20px, block, absolute, $black);
       transform: translate(-50%, -50%) rotate(135deg);
       top:50%;
       left:50%;
