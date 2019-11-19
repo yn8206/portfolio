@@ -6,10 +6,14 @@
         <Hooper :infiniteScroll="true" :itemsToShow="3" :wheelControl="false" :keysControl="false"  ref="carousel">
             <Pagination slot="hooper-addons"></Pagination>
             <Slide  v-for="item in list" :key="item.id" :style="{ backgroundImage: 'url(' + require('../img/web/'+ item.poster ) + ')' }"> 
-                <span class="blind">{{item.title}}</span> 
+                <div class="corver">
+                    <h3>{{item.title}}</h3>
+                    <p v-if="item.type !== 'pc' && item.type !== 'web'" v-html="item.sub_type" class="sub_tit">{{item.sub_type}}</p> 
+                    <p v-html="item.info" class="info">{{item.info}}</p>
+                    <span class="link">자세히 보기→</span>
+                </div>
             </Slide>
-            <!-- <hooper-navigation slot="hooper-addons"></hooper-navigation> -->
-        </Hooper>
+        </Hooper> 
     </div>
 </template>
 

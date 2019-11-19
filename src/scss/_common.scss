@@ -101,6 +101,43 @@ section{
   margin:0 auto;
   
   //hooper 슬라이더 커스텀
+  .corver{
+    background: rgba(0,0,0,0.8);
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 30px 30px;
+    text-align: left;
+    color:rgba(255,255,255, 0.8);
+	  @include fontfamily(100, "sq");
+    position: relative;
+    cursor: pointer;
+    // display: none;
+    // margin-top: -100%;
+    transition: all 100ms;
+    opacity: 0;
+    h3{
+      font-size: 22px;
+      color:$white;
+    }
+    .sub_tit{
+      margin-top:5px;
+      font-size: 16px;
+    }
+    .info{
+      font-size: 14px;
+      margin-top:14px;
+    }
+    .link{
+      position: absolute;
+      font-size: 12px;
+      right: 25px;
+      bottom: 15px;
+      text-align: right;
+      text-decoration: underline;
+
+    }
+  }
   .hooper{
     height: auto;
     padding: 0;
@@ -119,6 +156,13 @@ section{
     border-radius: 15px;
     border: 2px solid #efefef;
     box-shadow: 5px 5px 10px 0px #eee;
+    overflow: hidden;
+    &:hover{
+      .corver{
+        // margin-top: 0;
+        opacity: 1;
+      }
+    }
   }
   .slider{
     position: relative;

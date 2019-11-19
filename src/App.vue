@@ -38,6 +38,7 @@ export default {
         const obj = {
           id: item.id,
           type: item.type, // pc, mobile, responsive
+          sub_type: item.sub_type,
           title: item.title,
           info: item.work.info,
           poster: item.poster 

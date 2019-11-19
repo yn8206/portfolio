@@ -11,7 +11,9 @@
   font:{
     @if $nm == null {
         family: $family;
-	}@else{
+	}@else if($nm == "sq"){
+        family: $family_sq;
+    }@else{
         family: $family_pen;
     }
     weight: $weight;
