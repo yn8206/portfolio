@@ -56,7 +56,7 @@ export default {
       portfolioList.some((item, idx) => {
         if (item.id == $id) {
           this.item = item;
-          return true; // true쓰면 반복이 멈춤
+          return true; // true쓰면 반복이 멈춤  addeventlistener
         }
       });
     },

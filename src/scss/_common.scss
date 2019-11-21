@@ -10,7 +10,7 @@ h2{
 }
 .btn{
   min-width: 300px;
-  padding:25px 30px;
+  padding:25px 30px 23px;
   border:2px solid $point;
   border-radius: 8px;
   display: inline-block;
@@ -19,6 +19,11 @@ h2{
   font-size: 1.42rem;
   line-height: 1;
   box-sizing: border-box;
+  &:hover{
+    color: #e3a93f;
+    border-color: #e3a93f;
+    text-decoration: underline;
+  }
 }
 main, #about{
   @include fontfamily(100, "pen");
@@ -205,6 +210,7 @@ section{
     .slider{
       width: 100%;
       min-height: 761px;
+      @include bg("loading.svg",no-repeat, 50% 45%, 100px);
     }
     .bx_img{
       width: 100%;

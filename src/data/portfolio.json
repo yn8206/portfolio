@@ -4,7 +4,7 @@
         "type" : "pc",
         "title": "GOM & Company PC",
         "work" : {
-            "new": "60%",
+            "new": "70%",
             "info":"구축, 유지보수",
             "desc":"개발 PL로 초기 기획부터 구축, 전반적인 UI 작업에 참여하였습니다. <br>홍보, contact us 제외한 모든 UI개발을 담당하였습니다." 
         },
@@ -21,7 +21,7 @@
         "title": "GOM & Company Mobile",
         "sub_type":"반응형 (tablet, mobile)",
         "work" : {
-            "new": "40%",
+            "new": "50%",
             "info":"구축, 유지보수",
             "desc":"UI개발 PA로 구축에 참여하였습니다. <br>곰앤컴퍼니, 사업소개 , 채용안내 등 UI개발을 담당하였습니다." 
         },
@@ -38,7 +38,7 @@
         "sub_type":"반응형 (pc, tablet, mobile)",
         "title": "GOMLab", 
         "work" : {
-            "new": "80%",
+            "new": "90%",
             "info":"구축, 신규 페이지 개발, <br>개선 및 유지보수, 프로모션, DM",
             "desc":"개발 PL로 초기 기획부터 구축, 전반적인 UI 작업에 참여하였습니다. <br>한국어, 일본어, 영어를 지원하며, 웹 폰트를 경량화하여 적용하였습니다. <br>반응형 웹으로 작업하였습니다.<br>" 
         },

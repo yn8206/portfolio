@@ -13,7 +13,7 @@
                 </swiper>
             </div>
             <div class="bx_img" v-else>
-                <img :src="require('../img/web/'+item.img[0])" alt="">
+                <img :src="require('../img/web/'+item.img[0])" :alt="item.title+' 이미지'">
             </div>
             <div class="cont">
                 <p v-if="item.work.new"><b>개편 기여도 </b>: {{item.work.new}}</p>
