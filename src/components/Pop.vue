@@ -31,40 +31,40 @@
 import { swiper, swiperSlide } from 'vue-awesome-swiper';
 
 export default {
-    name:'popup',
-    data() {
-      return {
-        swiperOption: {
-          // swiper 옵션, 콜백함수 모두 동일하게 사용
-            loop:true,
-            // simulateTouch:false,
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false
-            },
-            pagination: {
-                el: '.pagination',
-                clickable: true,
-            },
-        }
-      }
+  name: 'popup',
+  data() {
+    return {
+      swiperOption: {
+        // swiper 옵션, 콜백함수 모두 동일하게 사용
+        loop: true,
+        // simulateTouch:false,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: '.pagination',
+          clickable: true,
+        },
+      },
+    };
+  },
+  props: {
+    item: {},
+  },
+  methods: {
+    closePop() {
+      this.$emit('closePopEvent');
     },
-    props:{
-        item:{}
+  },
+  computed: {
+    swiper() {
+      return this.$refs.mySwiper.swiper;
     },
-    methods:{
-        closePop(){
-            this.$emit("closePopEvent")
-        }
-    },
-    computed: {
-      swiper() {
-        return this.$refs.mySwiper.swiper
-      }
-    },
-    components: {
-        swiper,
-        swiperSlide
-    }
-}
+  },
+  components: {
+    swiper,
+    swiperSlide,
+  },
+};
 </script>

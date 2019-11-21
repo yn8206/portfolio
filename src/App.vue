@@ -31,8 +31,8 @@ export default {
         responsive: [],
         etc: [],
       },
-      item:null,
-      popTop:0
+      item: null,
+      popTop: 0,
     };
   },
   methods: {
@@ -44,26 +44,26 @@ export default {
           sub_type: item.sub_type,
           title: item.title,
           info: item.work.info,
-          poster: item.poster 
+          poster: item.poster,
         };
-        item.type == 'pc' ? this.list.pc.push(obj) : (item.type == 'mobile' ? this.list.mobile.push(obj) :  (item.type == 'etc' ? this.list.etc.push(obj) : this.list.responsive.push(obj)));
+        item.type == 'pc' ? this.list.pc.push(obj) : (item.type == 'mobile' ? this.list.mobile.push(obj) : (item.type == 'etc' ? this.list.etc.push(obj) : this.list.responsive.push(obj)));
       });
     },
-    openPop($id){
-      console.log("팝업을 오픈합니다!!");
-      document.getElementsByTagName("html")[0].style.overflow = 'hidden';
-      //js break continue x 대신 some, every 상용
+    openPop($id) {
+      console.log('팝업을 오픈합니다!!');
+      document.getElementsByTagName('html')[0].style.overflow = 'hidden';
+      // js break continue x 대신 some, every 상용
       portfolioList.some((item, idx) => {
-        if(item.id == $id){
+        if (item.id == $id) {
           this.item = item;
-          return true; //true쓰면 반복이 멈춤
+          return true; // true쓰면 반복이 멈춤
         }
       });
     },
-    closePop(){
-      document.getElementsByTagName("html")[0].style.overflow = '';
+    closePop() {
+      document.getElementsByTagName('html')[0].style.overflow = '';
       this.item = null;
-    }
+    },
   },
   created() {
     this.getPortfolio();
@@ -75,7 +75,7 @@ export default {
     Portfolio,
     Contact,
     Footer,
-    Pop
+    Pop,
   },
 };
 </script>

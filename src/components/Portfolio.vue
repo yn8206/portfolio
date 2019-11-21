@@ -35,13 +35,13 @@ export default {
   props: {
     list: Object,
   },
-  methods:{
-    openPop($id){
-      if($id < 100) this.$emit('openPopEvent', $id);
-    }
+  methods: {
+    openPop($id) {
+      if ($id < 100) this.$emit('openPopEvent', $id);
+    },
   },
   components: {
     PortItem,
-  }
+  },
 };
 </script>

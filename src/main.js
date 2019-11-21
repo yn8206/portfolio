@@ -3,7 +3,7 @@ import App from './App.vue';
 
 
 // import 'hooper/dist/hooper.css';
-import 'swiper/dist/css/swiper.css'
+import 'swiper/dist/css/swiper.css';
 import Style from './scss/style.scss';
 
 Vue.config.productionTip = false;
