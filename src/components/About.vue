@@ -17,12 +17,14 @@
         </article>
         <article class="skill">
             <h1 class="blind">MY SKILL</h1>
-            <img src="../img/html.svg" alt="Html5" class="img">
-            <img src="../img/css.svg" alt="Css3 & Scss" class="img">
-            <img src="../img/js.svg" alt="JavaScript & JQuery" class="img">
-            <img src="../img/git.svg" alt="Git, gitlab, github, bitbucket" class="img">
-            <img src="../img/gulp.svg" alt="Gulp" class="img">
-            <img src="../img/vue.svg" alt="vue" class="img">
+            <div class="cont">
+                <img src="../img/html.svg" alt="Html5" class="img">
+                <img src="../img/css.svg" alt="Css3 & Scss" class="img">
+                <img src="../img/js.svg" alt="JavaScript & JQuery" class="img">
+                <img src="../img/git.svg" alt="Git, gitlab, github, bitbucket" class="img">
+                <img src="../img/gulp.svg" alt="Gulp" class="img">
+                <img src="../img/vue.svg" alt="vue" class="img">
+            </div>
         </article>
     </section>
 </template>

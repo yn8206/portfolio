@@ -1,14 +1,34 @@
 <template>
     <section id="port">
         <h1>MY PORTFOLIO</h1>
-        <Item :list="list.responsive" :title="'Responsive'" @openPopEvent="openPop"/>
-        <Item :list="list.pc" :title="'PC'" @openPopEvent="openPop"/>
-        <Item :list="list.mobile" :title="'Mobile'" @openPopEvent="openPop"/>
-        <Item :list="list.web" :title="'ETC'" @openPopEvent="openPop"/>
+        <article class="list">
+          <h2>Responsive</h2>
+          <div class="unit"  v-for="item in list.responsive" :key="item.id" :style="{ backgroundImage: 'url('+require('../img/web/'+ item.poster )+')' }" @click="openPop(item.id)">
+            <PortItem :item="item"/>
+          </div>
+        </article>
+        <article class="list">
+          <h2>Mobile</h2>
+          <div class="unit"  v-for="item in list.mobile" :key="item.id" :style="{ backgroundImage: 'url('+require('../img/web/'+ item.poster )+')' }" @click="openPop(item.id)">
+            <PortItem :item="item"/>
+          </div>
+        </article>
+        <article class="list">
+          <h2>PC</h2>
+          <div class="unit"  v-for="item in list.pc" :key="item.id" :style="{ backgroundImage: 'url('+require('../img/web/'+ item.poster )+')' }" @click="openPop(item.id)">
+            <PortItem :item="item"/>
+          </div>
+        </article>
+        <article class="list">
+          <h2>ETC</h2>
+          <div class="unit"  v-for="item in list.etc" :key="item.id" :style="{ backgroundImage: 'url('+require('../img/web/'+ item.poster )+')' }" @click="openPop(item.id)">
+            <PortItem :item="item"/>
+          </div>
+        </article>
     </section>
 </template>
 <script>
-import Item from '@/components/List.vue';
+import PortItem from '@/components/PortItem.vue';
 
 export default {
   name: 'Portfolio',
@@ -17,11 +37,11 @@ export default {
   },
   methods:{
     openPop($id){
-      this.$emit('openPopEvent', $id);
+      if($id < 100) this.$emit('openPopEvent', $id);
     }
   },
   components: {
-    Item,
+    PortItem,
   }
 };
 </script>

@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-    <!-- <Header/> -->
+    <Header/>
     <Main/>
     <About/>
     <Portfolio :list="list" @openPopEvent="openPop"/>
-    <Pop v-if="this.item !== null" :item="item" @closePopEvent="closePop"/>
+    <Pop v-if="item !== null" :item="item" @closePopEvent="closePop" ref="pop"/>
     <Contact/>
     <Footer/>
   </div>
@@ -29,9 +29,10 @@ export default {
         pc: [],
         mobile: [],
         responsive: [],
-        web: [],
+        etc: [],
       },
       item:null,
+      popTop:0
     };
   },
   methods: {
@@ -45,20 +46,22 @@ export default {
           info: item.work.info,
           poster: item.poster 
         };
-        item.type == 'pc' ? this.list.pc.push(obj) : (item.type == 'mobile' ? this.list.mobile.push(obj) :  (item.type == 'web' ? this.list.web.push(obj) : this.list.responsive.push(obj)));
+        item.type == 'pc' ? this.list.pc.push(obj) : (item.type == 'mobile' ? this.list.mobile.push(obj) :  (item.type == 'etc' ? this.list.etc.push(obj) : this.list.responsive.push(obj)));
       });
     },
     openPop($id){
       console.log("팝업을 오픈합니다!!");
+      document.getElementsByTagName("html")[0].style.overflow = 'hidden';
       //js break continue x 대신 some, every 상용
       portfolioList.some((item, idx) => {
         if(item.id == $id){
           this.item = item;
-          return true;
+          return true; //true쓰면 반복이 멈춤
         }
       });
     },
     closePop(){
+      document.getElementsByTagName("html")[0].style.overflow = '';
       this.item = null;
     }
   },
