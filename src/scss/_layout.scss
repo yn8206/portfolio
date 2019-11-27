@@ -2,13 +2,16 @@ html,body{
   overflow:auto;
   color:$black;
   min-width: $pc;
+  @include respond-to('tablet'){
+    min-width: auto;
+  }
 }
 header,footer{
   width:100%;
   position:relative;
 }
 header{
-  min-width: $pc;
+  // width: 100%;
   height: $header_pc;
   position:fixed;
   top:0;
@@ -23,6 +26,50 @@ header{
   }
   .ico_menu{
     display:none;
+    width: 26px;
+    height: 20px;
+    position: absolute;
+    top:50%;
+    margin-top: -10px;
+    right: 4%;
+    z-index: 10;
+    span{
+      @include set_content(100%, 3px, block, unset, $black);
+      @include blind;
+      border-radius: 4px;
+      top:50%;
+      margin-top: -1px;
+      &:before, &:after{
+        @include set_content(100%, 3px, block, absolute, $black);
+        border-radius: 4px;
+      }
+      &:before{
+        top:0;
+      }
+      &:after{
+        bottom:0;
+      }
+    }
+  }
+  .ico_close{
+    display: none;
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    top:-37px;
+    right: 0%;
+    z-index: 11;
+    @include blind;
+    &:before, &:after{
+      @include set_content(100%, 3px, block, absolute, $black);
+      border-radius: 4px;
+    }
+    &:before{
+      transform: rotate( 45deg );
+    }
+    &:after{
+      transform: rotate( -45deg );
+    }
   }
   .gnb, ul, li, a{
     height: 100%;
@@ -72,6 +119,61 @@ header{
       }
     }
   }
+}
+
+@mixin table_header {
+  .gnb{
+    display: none;
+    width: 200px;
+    height: auto;
+    position:fixed;
+    border: 1px solid #eaeaea;
+    background: $white;
+    border-radius: 10px;
+    top:50px;
+    right: 0;
+    z-index: 10;
+    &.on{
+      display: block;
+      &+.ico_menu{
+        display: none;
+      }
+      .ico_close{
+        display: block;
+      }
+    }
+    ul{
+      width: 100%;
+      height: auto;
+      li{
+        width: 100%;
+        height: 45px;
+        border-top:1px solid #eee;
+        @include clear;
+        &:first-child{
+          border-top:none;
+        }
+        a{
+          padding: 0px 30px;
+          line-height: 45px;
+          &:before, &:after{
+            display:none;
+          }
+        }
+      }
+    }
+  }
+  .ico_menu{
+    display: block; 
+  }
+}
+header{
+  @include respond-to('tablet'){
+    @include table_header;
+  }
+}
+.mobile{
+  @include table_header;
 }
 .footer{
   min-width: $pc;

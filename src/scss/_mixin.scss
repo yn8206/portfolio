@@ -90,10 +90,10 @@
 }
 @mixin respond-to($media) {
 	@if $media == tablet {
-		@media (max-width:$pc_size) { @content; }
+		@media (max-width:$pc) { @content; }
 	}@else if $media == mobile {
-		@media (max-width:$tablet_size) { @content; }
-	}
+		@media (max-width:$tablet) { @content; }
+	} 
 }
 @function calcRem($size) { /*Mobile용 믹스인*/
     $remSize: $size / $font_def;

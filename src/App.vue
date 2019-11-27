@@ -33,6 +33,7 @@ export default {
       },
       item: null,
       popTop: 0,
+      device: '',
     };
   },
   methods: {
@@ -64,9 +65,19 @@ export default {
       document.getElementsByTagName('html')[0].style.overflow = '';
       this.item = null;
     },
+    checkDevice(){
+      //해상도가 큰 모바일도 있어서 대응하기 위해 세팅
+      const html = document.getElementsByTagName('html')[0];
+      html.classList.remove('pc', 'mobile');
+      const mobile = (/iphone|ipad|ipod|android/i.test(navigator.userAgent.toLowerCase()));
+      this.device = mobile?'mobile':'pc';
+      html.classList.add(this.device);
+    }
   },
   created() {
+    this.checkDevice();
     this.getPortfolio();
+    window.addEventListener('resize', this.checkDevice);
   },
   components: {
     Header,

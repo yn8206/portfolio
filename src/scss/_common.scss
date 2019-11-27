@@ -53,9 +53,6 @@ section{
   background: #fafafa;
   padding: 0;
   overflow: hidden;
-  // h1{
-  //   color:$point;
-  // }
   .intro{
     padding: 130px 0;
     font-size: 1.42rem;
@@ -63,21 +60,21 @@ section{
     color: #646464;
   }
   .skill{
-      padding:100px 0;
-      background: $point;
-      color:$white;
-      .img{
-        width:120px;
-        display: inline-block;
-        vertical-align: top;
-        margin: 0 40px;
-        &:first-child{
-          margin-left: 0;
-        }
-        &:last-child{
-          margin-right: 0;
-        }
+    padding:100px 0;
+    background: $point;
+    color:$white;
+    .img{
+      width:120px;
+      display: inline-block;
+      vertical-align: top;
+      margin: 0 40px;
+      &:first-child{
+        margin-left: 0;
       }
+      &:last-child{
+        margin-right: 0;
+      }
+    }
   }
 }
 #contact{
